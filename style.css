@@ -1,0 +1,39 @@
+/* Personalización de la tabla para que se vea profesional */
+#dataTable {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#dataTable th {
+    background-color: #f1f5f9;
+    color: #475569;
+    font-weight: 600;
+    padding: 12px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+#dataTable td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 14px;
+}
+
+#dataTable tr:hover {
+    background-color: #f8fafc;
+}
+
+/* Animación para el área de arrastre */
+#dropzone.dragover {
+    background-color: #eff6ff;
+    border-color: #3b82f6;
+    transform: scale(1.02);
+}
+
+/* Estilo para el botón de copiar */
+.btn-copy {
+    transition: all 0.2s;
+}
+
+.btn-copy:active {
+    transform: scale(0.95);
+}
