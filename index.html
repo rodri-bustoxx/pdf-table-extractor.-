@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Table Pro - Browser Edition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+</head>
+<body class="bg-slate-50 text-slate-900 min-h-screen">
+
+    <nav class="bg-blue-600 p-4 text-white shadow-lg">
+        <h1 class="text-xl font-bold">PDF Table Extractor <span class="text-blue-200 text-sm">Serverless</span></h1>
+    </nav>
+
+    <main class="max-w-5xl mx-auto p-6">
+        <div id="dropzone" class="border-4 border-dashed border-blue-200 rounded-xl p-12 text-center bg-white hover:border-blue-400 transition-all cursor-pointer">
+            <p class="text-lg text-slate-600">Arrastra tu PDF aquí o haz clic para subir</p>
+            <input type="file" id="fileInput" class="hidden" accept="application/pdf">
+        </div>
+
+        <div id="controls" class="mt-8 hidden flex gap-4">
+            <button onclick="copyTable()" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition">Copiar Tabla</button>
+            <button onclick="clearAll()" class="bg-red-50 text-red-600 px-4 py-2 rounded border border-red-200 hover:bg-red-100">Limpiar Todo</button>
+        </div>
+
+        <div id="resultContainer" class="mt-6 bg-white shadow-md rounded-lg overflow-hidden hidden">
+            <table id="dataTable" class="w-full text-left border-collapse">
+                </table>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
