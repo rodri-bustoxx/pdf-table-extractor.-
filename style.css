@@ -2,6 +2,7 @@
 #dataTable {
     border-radius: 8px;
     overflow: hidden;
+    border: 1px solid #e2e8f0;
 }
 
 #dataTable th {
@@ -18,22 +19,48 @@
     font-size: 14px;
 }
 
+/* Cambio de color al pasar el mouse */
 #dataTable tr:hover {
     background-color: #f8fafc;
 }
 
+/* ESTADO SELECCIONADO: Resalta la fila cuando el checkbox está marcado */
+#dataTable tr:has(input[type="checkbox"]:checked) {
+    background-color: #f0fdf4 !important; /* Verde muy suave */
+    border-left: 4px solid #22c55e; /* Indicador lateral verde */
+}
+
+/* Estilo para el Checkbox */
+.row-selector {
+    cursor: pointer;
+    accent-color: #2563eb; /* Color azul para el check */
+}
+
 /* Animación para el área de arrastre */
+#dropzone {
+    transition: all 0.3s ease;
+}
+
 #dropzone.dragover {
     background-color: #eff6ff;
     border-color: #3b82f6;
-    transform: scale(1.02);
+    transform: scale(1.01);
 }
 
-/* Estilo para el botón de copiar */
-.btn-copy {
+/* Estilo para los botones de control */
+button {
     transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.btn-copy:active {
+button:active {
     transform: scale(0.95);
+}
+
+/* Ajuste para que la tabla sea legible en móviles */
+#resultContainer {
+    max-height: 70vh;
+    overflow-y: auto;
 }
